@@ -14,7 +14,7 @@ const SUPABASE_ANON_KEY ='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhY
 const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 const corsOptions = {
- origin: 'https://ck-git-main-salt-spidys-projects.vercel.app', //
+ origin: 'https://ck-eta.vercel.app/', //
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
 };
