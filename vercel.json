@@ -2,22 +2,22 @@
   "version": 2,
   "builds": [
     {
-      "src": "package.json",
-      "use": "@vercel/static-build"
-    },
-    {
       "src": "server.js",
       "use": "@vercel/node"
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/api/(.*)",
-      "destination": "/server.js"
     },
     {
-      "source": "(.*)",
-      "destination": "/public/index.html"
+      "src": "src/App.js",
+      "use": "@vercel/static-build"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/upload",
+      "dest": "/server.js"
+    },
+    {
+      "src": "(.*)",
+      "dest": "/public/index.html"
     }
   ]
 }
