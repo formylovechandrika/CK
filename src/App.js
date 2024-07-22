@@ -21,8 +21,7 @@ const App = () => {
     formData.append('file', file);
 
     try {
-      const response = await axios.post('http://localhost:5000/upload', formData, {
-        headers: {
+      const response = await axios.post('https://ck-git-main-salt-spidys-projects.vercel.app/api/upload', formData, {        headers: {
           'Content-Type': 'multipart/form-data',
         },
       });
