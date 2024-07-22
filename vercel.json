@@ -1,13 +1,26 @@
 {
     "version": 2,
-    "routes": [
+    "builds": [
       {
-        "src": "/",
-        "dest": "/"
+        "src": "server.js",
+        "use": "@vercel/node"
       },
       {
+        "src": "src/app.js",
+        "use": "@vercel/static-build",
+        "config": {
+          "distDir": "public"
+        }
+      }
+    ],
+    "routes": [
+      {
         "src": "/upload",
-        "dest": "/"
+        "dest": "/server.js"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/public/index.html"
       }
     ]
   }
